@@ -1,14 +1,10 @@
 
 # 保存
-import time
+import csv
 
-def save_text(outputmoji: str) -> str:
-    # 名称
-    ts = time.strftime("%Y%m%d_%H%M%S")
-    filename = f"{ts}_transcript.txt"
+def save_text(outputmoji: str, filepath: str = "recognized_text.csv") -> None:
     # 追記
-    with open(filename, "a", encoding="utf-8") as f:
-        f.write(outputmoji + "\n")
-    # 戻り値
-    return filename
+    with open(filepath, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([outputmoji])
 
