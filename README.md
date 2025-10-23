@@ -42,3 +42,11 @@
 
 ```bash
 pip install ffmpeg-python pydub mlx-whisper numpy
+
+### 📌 出力ファイルの保存形式
+
+文字起こし結果は、上書きを避けるため、**タイムスタンプ**を含む以下の形式のファイル名で保存されます。（作業者3の担当機能）
+
+* **ファイル名形式:** `YYYYMMDD_HHMMSS_transcript.txt`
+
+**ファイル内容の例：**
