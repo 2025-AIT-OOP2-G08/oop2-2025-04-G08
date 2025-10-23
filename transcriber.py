@@ -11,7 +11,7 @@ def run_transcription_and_get_outputmoji(
     # 文字起こし結果を格納する変数
     outputmoji: List[str] = []
 
-    # --- 元のコードの「音声ファイルを指定して文字起こし」の部分 ---
+   
     
     # 処理の実行
     result: Dict[str, Any] = mlx_whisper.transcribe(
@@ -20,7 +20,7 @@ def run_transcription_and_get_outputmoji(
     # 結果のテキストを outputmoji に格納
     outputmoji.append(result.get("text", "").strip())
     
-    # --- 元のコードの「音声データを指定して文字起こし」の部分 ---
+   
     
     def preprocess_audio(sound):
         # この関数は元のコードの構造を保つため、内部に定義
@@ -50,20 +50,3 @@ def run_transcription_and_get_outputmoji(
         outputmoji.append(result_data.get("text", "").strip())
         
     return outputmoji
-
-if __name__ == '__main__':
-    
-    # テスト用のファイルパス
-    INPUT_FILE = "voice.wav"
-    
-    try:
-        # 関数を実行し、結果を outputmoji 変数に格納
-        outputmoji = run_transcription_and_get_outputmoji(INPUT_FILE)
-        
-        print("--- 文字起こし処理が完了しました ---")
-        print(f"次の人に渡す変数 outputmoji の内容:\n{outputmoji}")
-        
-    except FileNotFoundError:
-        print(f"エラー: 音声ファイル {INPUT_FILE} が見つかりません。")
-    except Exception as e:
-        print(f"処理中にエラーが発生しました: {e}")
