@@ -41,7 +41,7 @@ outputmoji
 
 ```bash
 # 必須ライブラリ
-pip install PyAudio SpeechRecognition pydub wave
+'pip install PyAudio SpeechRecognition pydub wave'
 # PyAudioは環境により別途システムライブラリ（例：PortAudio）が必要な場合があります
 
 
