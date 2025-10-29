@@ -44,6 +44,8 @@ outputmoji
 pip install PyAudio SpeechRecognition pydub wave
 # PyAudioは環境により別途システムライブラリ（例：PortAudio）が必要な場合があります
 
+
+
 ##  4. アプリケーション実行手順
 
 1.  **リポジトリのクローン**
