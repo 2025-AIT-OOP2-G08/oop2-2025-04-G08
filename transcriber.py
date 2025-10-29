@@ -6,7 +6,7 @@ from typing import Dict, Any, List
 
 def run_transcription_and_get_outputmoji(
     audio_file_path: str = "voice.wav", 
-    model_name: str = "whisper-base-mlx"
+    model_name: str = "mlx-community/whisper-base-mlx"
 ) -> List[str]:
     
     # 文字起こし結果を格納する変数
